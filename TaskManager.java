@@ -35,8 +35,11 @@ public class TaskManager extends JFrame {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO: Member 1 sẽ code logic thêm task vào đây
-                JOptionPane.showMessageDialog(null, "Chức năng chưa được cài đặt!");
+                String task = taskInput.getText();
+                if (!task.isEmpty()) {
+                    listModel.addElement(task);
+                    taskInput.setText("");
+                }
             }
         });
 
